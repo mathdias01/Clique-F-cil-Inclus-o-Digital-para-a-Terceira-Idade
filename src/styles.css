@@ -1,0 +1,191 @@
+@import "tailwindcss" source(none);
+
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Sistema de design do Clique Fácil
+ *
+ * Paleta suave e profissional: fundo claro levemente esverdeado,
+ * primário em azul-esverdeado (teal) calmo, contraste alto.
+ * Fonte: Atkinson Hyperlegible — desenhada para máxima legibilidade.
+ * Texto base grande (mínimo 18px) pensando em pessoas idosas.
+ */
+
+@theme inline {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-soft-foreground: var(--primary-soft-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-hero: var(--hero);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Fundo claro, levemente esverdeado e acolhedor */
+  --background: oklch(0.985 0.008 120);
+  --foreground: oklch(0.26 0.025 200);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.26 0.025 200);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.26 0.025 200);
+
+  /* Primário: azul-esverdeado (teal) suave e confiável */
+  --primary: oklch(0.48 0.085 190);
+  --primary-foreground: oklch(0.99 0.005 120);
+
+  /* Versão clara do primário para fundos de seção e chips */
+  --primary-soft: oklch(0.945 0.03 185);
+  --primary-soft-foreground: oklch(0.34 0.06 195);
+
+  --secondary: oklch(0.94 0.02 150);
+  --secondary-foreground: oklch(0.33 0.04 165);
+
+  --muted: oklch(0.955 0.012 160);
+  --muted-foreground: oklch(0.42 0.03 200);
+
+  --accent: oklch(0.93 0.035 170);
+  --accent-foreground: oklch(0.3 0.05 190);
+
+  --destructive: oklch(0.55 0.19 27);
+  --destructive-foreground: oklch(0.99 0.005 120);
+
+  --border: oklch(0.9 0.02 170);
+  --input: oklch(0.88 0.02 170);
+  --ring: oklch(0.48 0.085 190);
+
+  /* Faixa de destaque (seção "Nosso objetivo") */
+  --hero: oklch(0.93 0.03 165);
+}
+
+.dark {
+  color-scheme: dark;
+  --background: oklch(0.22 0.035 190);
+  --foreground: oklch(0.96 0.012 175);
+  --card: oklch(0.27 0.035 190);
+  --card-foreground: oklch(0.96 0.012 175);
+  --popover: oklch(0.27 0.035 190);
+  --popover-foreground: oklch(0.96 0.012 175);
+  --primary: oklch(0.72 0.105 180);
+  --primary-foreground: oklch(0.2 0.035 190);
+  --primary-soft: oklch(0.34 0.055 185);
+  --primary-soft-foreground: oklch(0.9 0.04 175);
+  --secondary: oklch(0.31 0.035 175);
+  --secondary-foreground: oklch(0.94 0.015 175);
+  --muted: oklch(0.29 0.025 185);
+  --muted-foreground: oklch(0.78 0.025 180);
+  --accent: oklch(0.35 0.05 180);
+  --accent-foreground: oklch(0.96 0.012 175);
+  --destructive: oklch(0.68 0.17 25);
+  --destructive-foreground: oklch(0.98 0.005 120);
+  --border: oklch(0.42 0.035 185);
+  --input: oklch(0.46 0.035 185);
+  --ring: oklch(0.72 0.105 180);
+  --hero: oklch(0.3 0.045 180);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Compensa o cabeçalho fixo ao navegar por âncoras */
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-size: 1.125rem; /* 18px — confortável para leitura */
+    line-height: 1.65;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  /* Foco bem visível em todos os elementos interativos */
+  :focus-visible {
+    outline: 3px solid var(--color-ring);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+/* Link "pular para o conteúdo": aparece ao navegar por teclado */
+@utility skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+
+  &:focus {
+    left: 1rem;
+    top: 1rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+    border-radius: 0 0 0.75rem 0.75rem;
+  }
+}
+
+/* Surgimento suave ao rolar (usado pelo componente Revelar) */
+.pre-revelar {
+  opacity: 0;
+  translate: 0 20px;
+  transition: opacity 0.7s ease-out, translate 0.7s ease-out;
+}
+
+.revelado {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* Quem prefere menos movimento no sistema não vê animação nenhuma */
+@media (prefers-reduced-motion: reduce) {
+  .pre-revelar,
+  .revelado {
+    opacity: 1;
+    translate: none;
+    transition: none;
+  }
+}
+

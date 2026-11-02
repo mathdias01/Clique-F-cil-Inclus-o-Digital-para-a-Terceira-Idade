@@ -1,0 +1,36 @@
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun-debug.log*
+
+# Dependências e arquivos gerados
+node_modules/
+dist/
+dist-ssr/
+.output/
+.vinxi/
+.tanstack/
+.nitro/
+.wrangler/
+.vercel/
+
+# Arquivos de ambiente
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
