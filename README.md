@@ -1,29 +1,52 @@
-# Welcome to your Lovable project
+# Clique Fácil — Inclusão Digital para a Terceira Idade
 
-This project was built with [Lovable](https://lovable.dev).
+Projeto de extensão universitária desenvolvido no curso de Engenharia de Software da Universidade de Vassouras, Polo Saquarema, com o objetivo de promover a inclusão digital de pessoas idosas.
 
-## Build with Lovable
+O projeto busca facilitar o uso de aplicativos e tecnologias do cotidiano por meio de orientações simples, acessíveis e práticas.
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+## Objetivos
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- Promover a inclusão digital da população idosa.
+- Incentivar o uso seguro de celulares e aplicativos.
+- Orientar sobre prevenção de golpes e fraudes digitais.
+- Facilitar o acesso a recursos tecnológicos utilizados no dia a dia.
 
-## Development
+## Tecnologias utilizadas
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+- React
+- TypeScript
+- Tailwind CSS
+- TanStack Start
+- Vite
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+## Executar o projeto localmente
+
+É necessário ter o [Bun](https://bun.sh/) instalado.
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/mathdias01/Clique-F-Cil-Inclus-o-Digital-para-a-Terceira-Idade.git
 ```
 
-## Built with
+Entre na pasta do projeto:
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+```bash
+cd Clique-F-Cil-Inclus-o-Digital-para-a-Terceira-Idade
+```
+
+Instale as dependências:
+
+```bash
+bun install
+```
+
+Inicie o servidor de desenvolvimento:
+
+```bash
+bun run dev
+```
+
+## Projeto
+
+O Clique Fácil integra uma iniciativa de extensão universitária voltada à promoção da autonomia e da segurança digital de pessoas idosas.
